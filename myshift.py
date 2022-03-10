@@ -36,7 +36,7 @@ async def get_shifts(shift_id: str):
             return shifts
     raise HTTPException(status_code=404, detail="does not exist")
 
-@app.delete("/shifts{shift_id}")
+@app.delete('/shifts{shift_id}')
 async def delete_shifts(shift_id: str):
     for index, shifts in enumerate(shiftlist):
         if shifts.id == shift_id:
